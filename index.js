@@ -913,24 +913,7 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-  case 'joox':
-const text = text.replace(/'joox' /, '')
-const joox = async (url) => new Promise(async (resolve, reject) => {
-    const api = `https://api.vhtear.com/music?query=${url}&apikey=${vhtearkey}`
-    axios.get(api).then(async(res) => {
-        const st = res.data.result
-        if(st.status === false){
-            resolve(`Media Tidak Di Temukan`)
-        }else{
-            resolve(st)
-        }
-    }).catch(err => {
-        console.log(err)
-        resolve(`Maaf, Server Sedang Error`)
-    })
-})
- 
-   else if (text == 'assalamualaikum'){
+    else if (text == 'assalamualaikum'){
 conn.sendMessage(id, '3aalaikumsalam, Ketik #menu/#info/#donasi Contoh #menu' ,MessageType.text);
 }
 else if (text == 'salam'){
